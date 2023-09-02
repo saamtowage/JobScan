@@ -1,0 +1,125 @@
+body {
+    display: grid;
+    grid-template-rows: auto 1fr;
+    gap: 2rem;
+}
+
+button.icon:focus-visible span,
+button.icon:hover span {
+    color: var(--primary-background);
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    height: 7vh;
+    padding: 1vh;
+}
+
+nav {
+    display: grid;
+    place-items: center;
+    grid-auto-flow: column;
+    gap: 1rem;
+}
+
+@media (prefers-color-scheme: light) {
+    #logo {
+        filter: invert(1);
+    }
+}
+
+#login-dialog {
+    padding-top: 1rem;
+}
+
+#login-dialog h2 {
+    margin: 0;
+}
+
+dialog>div {
+    display: grid;
+    grid-auto-flow: row;
+    gap: 1rem;
+}
+
+#login-form {
+    display: grid;
+    grid-auto-flow: row;
+    gap: 1rem;
+}
+
+dialog nav {
+    display: flex;
+    justify-content: space-between;
+}
+
+main {
+    display: grid;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+#top {
+    display: flex;
+    justify-content: space-around;
+}
+
+main > .vessels {
+    --_vessels-list-gap: 1rem;
+
+    display: grid;
+    grid-auto-flow: row;
+    gap: var(--_vessels-list-gap);
+}
+
+.vessel {
+    min-height: 10vh;
+    border: 2px solid var(--primary-contrast);
+    margin: 0 5%;
+    border-radius: 1rem;
+    display: grid;
+    grid-template-columns: 9fr 1fr;
+    transition: border 300ms ease, opacity 300ms ease;
+    animation: appear-vessel 300ms ease;
+}
+
+@keyframes appear-vessel {from {opacity: 0;} to {opacity: 1;}}
+
+.vessel:has(button:hover) {
+    border: 2px solid var(--error-color);
+}
+
+.vessel.hide {
+    opacity: 0;
+}
+
+.vessel.blurred {
+    filter: blur(15px);
+}
+
+.vessel button {
+    background-color: var(--primary-contrast);
+    border-top-right-radius: .75rem;
+    border-bottom-right-radius: .75rem;
+    border: none;
+    border-left: 2px solid var(--primary-contrast);
+    cursor: pointer;
+    transition: background-color 300ms ease, border 300ms ease;
+}
+
+.vessel button:hover {
+    background-color: var(--error-color);
+    border-left: 2px solid var(--error-color);
+}
+
+.vessel button span {
+    color: var(--primary-background);
+}
+
+.vessel .name {
+    display: grid;
+    place-items: center start;
+    padding: 0 1rem;
+    font-size: 30px;
+}

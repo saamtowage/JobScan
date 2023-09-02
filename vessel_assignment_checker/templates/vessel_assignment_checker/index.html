@@ -1,0 +1,115 @@
+{% extends "vessel_assignment_checker/layout.html" %}
+{% load static %}
+
+{% block body %}
+{% csrf_token %}
+{% if user.is_authenticated %}
+<div id="top">
+    <form action="{% url 'vessels' %}" method="post" id="add-vessel-form">
+        <input autocomplete="off" required type="text" name="vessel_name" id="vessel_name" placeholder="Vessel name">
+        <button>Add</button>
+    </form>
+    <button data-url="{% url 'run_scan' %}" id="scanNowButton">Run scan now</button>
+</div>
+{% endif %}
+<div class="vessels">
+    {% for vessel in vessels %}
+    <div class="vessel {% if not user.is_authenticated %}blurred{% endif %}">
+        <span class="name">{% if user.is_authenticated %}{{vessel.name|title}}{% else %}Please log in to view this{% endif %}</span>
+        <button {% if not user.is_authenticated %} disabled {% endif %} data-id="{{vessel.id}}" data-actionLink="{% url 'mod_vessel' id=vessel.id %}" class="no-style delete-vessel">
+            <span class="material-symbols-outlined">delete</span>
+        </button>
+    </div>
+    {% empty %}
+    <h2 style="text-align: center;">No entitled vessels in the database. Add one using the input above.</h2>
+    {% endfor %}
+</div>
+
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const csrftoken = document.querySelector('input[name="csrfmiddlewaretoken"]').value;
+        // Delete buttons functionality
+        let deleteButtons = document.querySelectorAll(".delete-vessel");
+        let vesselContainers = Array.prototype.slice.call(document.querySelectorAll(".vessel")); // https://gomakethings.com/converting-a-nodelist-to-an-array-with-vanilla-javascript/
+        const animationDuration = 300;
+        addDeleteListeners();
+
+        function addDeleteListeners () {
+            deleteButtons.forEach((button, index) => {
+                button.addEventListener("click", (event) => {
+                    fetch(event.currentTarget.dataset.actionlink, {
+                        headers: {"X-CSRFToken": csrftoken },
+                        method:'DELETE'
+                    }).then(response => {
+                        if (response.ok) {
+                            const parent = button.parentElement;
+                            parent.classList.add("hide");
+                            const lowerVessels = vesselContainers.slice(index+1, vesselContainers.length+1);
+                            lowerVessels.forEach(element => {
+                                element.animate([
+                                    {transform:"translateY(0)"},
+                                    {transform:`translateY(calc(-100% - ${getComputedStyle(element).getPropertyValue("--_vessels-list-gap").trim()}))`}
+                                ], {
+                                    duration:animationDuration,
+                                    fill:"none",
+                                    easing: "ease"
+                                })
+                            })
+                            setTimeout(() => {
+                                button.parentElement.remove();
+                            }, animationDuration);
+                        }
+                    })
+                })
+            })
+        }
+
+        // Add vessel functionality
+        const addVesselForm = document.querySelector("#add-vessel-form");
+        addVesselForm.addEventListener("submit", e => {
+            e.preventDefault();
+            fetch(e.currentTarget.action, {
+                method:e.currentTarget.method,
+                headers: {"X-CSRFToken": csrftoken },
+                body: JSON.stringify({
+                    vesselName:e.currentTarget.querySelector("[name='vessel_name']").value
+                })
+            }).then(response => response.json()).then(data => {
+                if (data.status === 200) {
+                    addVesselForm.querySelector("#vessel_name").value = '';
+                    const newVessel = document.querySelector(".vessel").cloneNode(true);
+                    newVessel.querySelector("span").innerHTML = data.vessel.name.replace(/\w\S*/g, txt => txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase());
+                    newVessel.querySelector("button").dataset.actionlink.replace(/\d+$/, data.vessel.id)
+                    vesselContainers.forEach(element => {
+                        element.animate([
+                            {transform:"translateY(0)"},
+                            {transform:`translateY(calc(100% - ${getComputedStyle(element).getPropertyValue("--_vessels-list-gap").trim()}))`}
+                        ], {
+                            duration:animationDuration,
+                            fill:"none",
+                            easing: "ease"
+                        })
+                    })
+                    setTimeout(() => {
+                        document.querySelector(".vessels").prepend(newVessel)
+                        vesselContainers = Array.prototype.slice.call(document.querySelectorAll(".vessel"));
+                        deleteButtons = document.querySelectorAll(".delete-vessel");
+                        addDeleteListeners();
+                    }, animationDuration);
+                } else {
+                    throw new Error(data.message)
+                }
+            }).catch(error => {
+                console.error(error)
+            })
+        })
+
+        // Scan now button functionality
+        const scanNowButton = document.querySelector("#scanNowButton");
+        scanNowButton.addEventListener("click", e => {
+            fetch(e.currentTarget.dataset.url)
+            alert("Running scan...")
+        })
+    })
+</script>
+{% endblock %}

@@ -1,0 +1,4 @@
+@layer ADE, my-styles;
+
+@import url("https://cdn.jsdelivr.net/gh/Collert/AD-Elements@master/main.css") layer(ADE);
+@import "/project_styles.css" layer(my-styles);

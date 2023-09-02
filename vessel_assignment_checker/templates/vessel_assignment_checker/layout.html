@@ -1,0 +1,102 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="{% static 'vessel_assignment_checker/layers.css' %}" rel="stylesheet">
+    <link href="{% static 'vessel_assignment_checker/project_styles.css' %}" rel="stylesheet">
+    <title>SAAM Entitled Vessels</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <style>
+        .material-symbols-outlined {
+          font-variation-settings:
+          'FILL' 0,
+          'wght' 400,
+          'GRAD' 0,
+          'opsz' 48
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img id="logo" src="{% static 'vessel_assignment_checker/Logo_blanco.png' %}">
+        <nav>
+            {% if user.is_authenticated %}
+            <span>Hello, {{user.first_name}} {{user.last_name}}!</span>
+            <a class="button" href="{% url 'logout' %}">Logout</a>
+            {% else %}
+            <button id="login-button">Log in</button>
+            {% endif %}
+        </nav>
+    </header>
+    <dialog id="login-dialog">
+        <div>
+            <nav>
+                <h2>Log in</h2>
+                <button class="icon"><span id="close-button" class="material-symbols-outlined">close</span></button>
+            </nav>
+            <form id="login-form" action="{% url 'login' %}" method="post">
+                {% csrf_token %}
+                <input type="text" name="username" id="username" placeholder="Username">
+                <input type="password" name="password" id="password" placeholder="Password">
+                <button>Submit</button>
+            </form>
+        </div>
+    </dialog>
+    <main>{% block body %}{% endblock %}</main>
+</body>
+<script>
+    const dialog = document.querySelector("#login-dialog");
+    const loginButton = document.querySelector("#login-button");
+    const closeButton = document.querySelector("#close-button");
+    const loginForm = document.querySelector("#login-form");
+
+    loginButton && loginButton.addEventListener("click", ()=>{
+        dialog.showModal()
+    })
+    closeButton.addEventListener("click", ()=>{
+        dialog.close()
+    })
+    loginForm.addEventListener("submit", e=>{
+        e.preventDefault();
+        let csrftoken = e.target.querySelector('input[name="csrfmiddlewaretoken"]').value;
+        displayResponse("Logging you in...", false)
+        const url = e.target.action;
+        fetch(url, {
+            method:e.target.method,
+            headers: {"X-CSRFToken": csrftoken },
+            body: JSON.stringify({
+                username:e.target.querySelector("[name='username']").value,
+                password:e.target.querySelector("[name='password']").value
+            })
+        }).then(response=>response.json()).then(data=>{
+            if (data.status !== 200) {
+                throw new Error(data.message)
+            } else {
+                displayResponse(data.message, false);
+                location.reload();
+            }
+        }).catch(error=>{
+            console.error(error)
+            displayResponse(error)
+        })
+    })
+
+    function displayResponse(message, error=true) {
+        let text = document.querySelector("#error-message");
+        document.querySelector("#username").className = error ? "error" : "success";
+        document.querySelector("#password").className = error ? "error" : "success";
+        if (!text) {
+            text = document.createElement("div");
+            text.innerHTML = message;
+            text.style.textAlign = "center";
+            text.id = "error-message";
+            loginForm.appendChild(text);
+        } else {
+            text.innerHTML = message;
+        }
+    }
+</script>
+</html>
