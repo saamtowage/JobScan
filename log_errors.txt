@@ -1,0 +1,181 @@
+Cl Chenzhou
+Dsi Andromeda
+Europe
+Seaways Galle
+Seaways Galle
+Molyvos Luck
+Molyvos Luck
+Mount Aso
+Mount Aso
+Valkyrie
+Valkyrie
+Valkyrie
+Rg Ceres
+Prt Hope
+Sakura Dream
+Atalanti.Gr
+Rg Ceres
+Viking Sea
+Viking Sea
+Viking Sea
+Viking Sea
+Pacific Calm
+Maro K
+Maro K
+Maro K
+Maro K
+Venus History
+Pacific Calm
+Maro K
+Pacific Calm
+Maro K
+Hyundai Faith
+Crimson Knight
+Yaca
+Mh Oslo
+Yaca
+Yaca
+Mh Oslo
+Crimson Knight
+Aquavita Sea
+Aquavita Sea
+Aquavita Sea
+Mh Oslo
+Aquavita Sea
+Mh Oslo
+Mh Oslo
+Cma Cgm Cochin
+Nikitis
+Cemtex Creation
+Nikitis
+Nikitis
+Genco Auvergne
+Nikitis
+Nikitis
+Sakura Dream
+Nikitis
+Xiang Ming Yang
+Torm Voyager
+Torm Voyager
+Genco Auvergne
+Genco Auvergne
+Torm Voyager
+Queen Sapphire
+Traceback (most recent call last):
+  File "C:\Users\gcanuto\Documents\NominationProject\web\myenv\Lib\site-packages\urllib3\connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gcanuto\Documents\NominationProject\web\myenv\Lib\site-packages\urllib3\util\connection.py", line 85, in create_connection
+    raise err
+  File "C:\Users\gcanuto\Documents\NominationProject\web\myenv\Lib\site-packages\urllib3\util\connection.py", line 73, in create_connection
+    sock.connect(sa)
+TimeoutError: [WinError 10060] A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\gcanuto\Documents\NominationProject\web\myenv\Lib\site-packages\urllib3\connectionpool.py", line 791, in urlopen
+    response = self._make_request(
+               ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gcanuto\Documents\NominationProject\web\myenv\Lib\site-packages\urllib3\connectionpool.py", line 492, in _make_request
+    raise new_e
+  File "C:\Users\gcanuto\Documents\NominationProject\web\myenv\Lib\site-packages\urllib3\connectionpool.py", line 468, in _make_request
+    self._validate_conn(conn)
+  File "C:\Users\gcanuto\Documents\NominationProject\web\myenv\Lib\site-packages\urllib3\connectionpool.py", line 1097, in _validate_conn
+    conn.connect()
+  File "C:\Users\gcanuto\Documents\NominationProject\web\myenv\Lib\site-packages\urllib3\connection.py", line 611, in connect
+    self.sock = sock = self._new_conn()
+                       ^^^^^^^^^^^^^^^^
+  File "C:\Users\gcanuto\Documents\NominationProject\web\myenv\Lib\site-packages\urllib3\connection.py", line 212, in _new_conn
+    raise ConnectTimeoutError(
+urllib3.exceptions.ConnectTimeoutError: (<urllib3.connection.HTTPSConnection object at 0x000002253CF07E50>, 'Connection to ppaportal.portlink.co timed out. (connect timeout=None)')
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\gcanuto\Documents\NominationProject\web\myenv\Lib\site-packages\requests\adapters.py", line 486, in send
+    resp = conn.urlopen(
+           ^^^^^^^^^^^^^
+  File "C:\Users\gcanuto\Documents\NominationProject\web\myenv\Lib\site-packages\urllib3\connectionpool.py", line 845, in urlopen
+    retries = retries.increment(
+              ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gcanuto\Documents\NominationProject\web\myenv\Lib\site-packages\urllib3\util\retry.py", line 515, in increment
+    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='ppaportal.portlink.co', port=443): Max retries exceeded with url: /api/pdams/GetCurrentVesselTraffic (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x000002253CF07E50>, 'Connection to ppaportal.portlink.co timed out. (connect timeout=None)'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\gcanuto\Documents\NominationProject\web\manage.py", line 22, in <module>
+    main()
+  File "C:\Users\gcanuto\Documents\NominationProject\web\manage.py", line 18, in main
+    execute_from_command_line(sys.argv)
+  File "C:\Users\gcanuto\Documents\NominationProject\web\myenv\Lib\site-packages\django\core\management\__init__.py", line 442, in execute_from_command_line
+    utility.execute()
+  File "C:\Users\gcanuto\Documents\NominationProject\web\myenv\Lib\site-packages\django\core\management\__init__.py", line 436, in execute
+    self.fetch_command(subcommand).run_from_argv(self.argv)
+  File "C:\Users\gcanuto\Documents\NominationProject\web\myenv\Lib\site-packages\django\core\management\base.py", line 412, in run_from_argv
+    self.execute(*args, **cmd_options)
+  File "C:\Users\gcanuto\Documents\NominationProject\web\myenv\Lib\site-packages\django\core\management\base.py", line 458, in execute
+    output = self.handle(*args, **options)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gcanuto\Documents\NominationProject\web\vessel_assignment_checker\management\commands\scan.py", line 93, in handle
+    response = requests.get('https://ppaportal.portlink.co/api/pdams/GetCurrentVesselTraffic')
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gcanuto\Documents\NominationProject\web\myenv\Lib\site-packages\requests\api.py", line 73, in get
+    return request("get", url, params=params, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gcanuto\Documents\NominationProject\web\myenv\Lib\site-packages\requests\api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gcanuto\Documents\NominationProject\web\myenv\Lib\site-packages\requests\sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gcanuto\Documents\NominationProject\web\myenv\Lib\site-packages\requests\sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gcanuto\Documents\NominationProject\web\myenv\Lib\site-packages\requests\adapters.py", line 507, in send
+    raise ConnectTimeout(e, request=request)
+requests.exceptions.ConnectTimeout: HTTPSConnectionPool(host='ppaportal.portlink.co', port=443): Max retries exceeded with url: /api/pdams/GetCurrentVesselTraffic (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x000002253CF07E50>, 'Connection to ppaportal.portlink.co timed out. (connect timeout=None)'))
+Queen Sapphire
+Nord Copenhagen
+An error occurred: 401 Client Error: Unauthorized for url: https://ppaportal.portlink.co/api/pdams/GetCurrentVesselTraffic
+An error occurred: 401 Client Error: Unauthorized for url: https://ppaportal.portlink.co/api/pdams/GetCurrentVesselTraffic
+An error occurred: 401 Client Error: Unauthorized for url: https://ppaportal.portlink.co/api/pdams/GetCurrentVesselTraffic
+An error occurred: 401 Client Error: Unauthorized for url: https://ppaportal.portlink.co/api/pdams/GetCurrentVesselTraffic
+An error occurred: 401 Client Error: Unauthorized for url: https://ppaportal.portlink.co/api/pdams/GetCurrentVesselTraffic
+An error occurred: 401 Client Error: Unauthorized for url: https://ppaportal.portlink.co/api/pdams/GetCurrentVesselTraffic
+An error occurred: 401 Client Error: Unauthorized for url: https://ppaportal.portlink.co/api/pdams/GetCurrentVesselTraffic
+An error occurred: 401 Client Error: Unauthorized for url: https://ppaportal.portlink.co/api/pdams/GetCurrentVesselTraffic
+An error occurred: 401 Client Error: Unauthorized for url: https://ppaportal.portlink.co/api/pdams/GetCurrentVesselTraffic
+An error occurred: 401 Client Error: Unauthorized for url: https://ppaportal.portlink.co/api/pdams/GetCurrentVesselTraffic
+An error occurred: 401 Client Error: Unauthorized for url: https://ppaportal.portlink.co/api/pdams/GetCurrentVesselTraffic
+An error occurred: 401 Client Error: Unauthorized for url: https://ppaportal.portlink.co/api/pdams/GetCurrentVesselTraffic
+An error occurred: 401 Client Error: Unauthorized for url: https://ppaportal.portlink.co/api/pdams/GetCurrentVesselTraffic
+An error occurred: 401 Client Error: Unauthorized for url: https://ppaportal.portlink.co/api/pdams/GetCurrentVesselTraffic
+An error occurred: 401 Client Error: Unauthorized for url: https://ppaportal.portlink.co/api/pdams/GetCurrentVesselTraffic
+An error occurred: 401 Client Error: Unauthorized for url: https://ppaportal.portlink.co/api/pdams/GetCurrentVesselTraffic
+An error occurred: 401 Client Error: Unauthorized for url: https://ppaportal.portlink.co/api/pdams/GetCurrentVesselTraffic
+An error occurred: 401 Client Error: Unauthorized for url: https://ppaportal.portlink.co/api/pdams/GetCurrentVesselTraffic
+An error occurred: 401 Client Error: Unauthorized for url: https://ppaportal.portlink.co/api/pdams/GetCurrentVesselTraffic
+An error occurred: 401 Client Error: Unauthorized for url: https://ppaportal.portlink.co/api/pdams/GetCurrentVesselTraffic
+An error occurred: 401 Client Error: Unauthorized for url: https://ppaportal.portlink.co/api/pdams/GetCurrentVesselTraffic
+An error occurred: 401 Client Error: Unauthorized for url: https://ppaportal.portlink.co/api/pdams/GetCurrentVesselTraffic
+An error occurred: 401 Client Error: Unauthorized for url: https://ppaportal.portlink.co/api/pdams/GetCurrentVesselTraffic
+An error occurred: 401 Client Error: Unauthorized for url: https://ppaportal.portlink.co/api/pdams/GetCurrentVesselTraffic
+An error occurred: 401 Client Error: Unauthorized for url: https://ppaportal.portlink.co/api/pdams/GetCurrentVesselTraffic
+An error occurred: 401 Client Error: Unauthorized for url: https://ppaportal.portlink.co/api/pdams/GetCurrentVesselTraffic
+An error occurred: 401 Client Error: Unauthorized for url: https://ppaportal.portlink.co/api/pdams/GetCurrentVesselTraffic
+An error occurred: 401 Client Error: Unauthorized for url: https://ppaportal.portlink.co/api/pdams/GetCurrentVesselTraffic
+An error occurred: 401 Client Error: Unauthorized for url: https://ppaportal.portlink.co/api/pdams/GetCurrentVesselTraffic
+An error occurred: 401 Client Error: Unauthorized for url: https://ppaportal.portlink.co/api/pdams/GetCurrentVesselTraffic
+An error occurred: 401 Client Error: Unauthorized for url: https://ppaportal.portlink.co/api/pdams/GetCurrentVesselTraffic
+An error occurred: 401 Client Error: Unauthorized for url: https://ppaportal.portlink.co/api/pdams/GetCurrentVesselTraffic
+An error occurred: 401 Client Error: Unauthorized for url: https://ppaportal.portlink.co/api/pdams/GetCurrentVesselTraffic
+An error occurred: 401 Client Error: Unauthorized for url: https://ppaportal.portlink.co/api/pdams/GetCurrentVesselTraffic
+An error occurred: 401 Client Error: Unauthorized for url: https://ppaportal.portlink.co/api/pdams/GetCurrentVesselTraffic
+An error occurred: 401 Client Error: Unauthorized for url: https://ppaportal.portlink.co/api/pdams/GetCurrentVesselTraffic
+An error occurred: 401 Client Error: Unauthorized for url: https://ppaportal.portlink.co/api/pdams/GetCurrentVesselTraffic
+An error occurred: 401 Client Error: Unauthorized for url: https://ppaportal.portlink.co/api/pdams/GetCurrentVesselTraffic
+The resource was not found!

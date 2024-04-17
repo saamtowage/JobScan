@@ -1,0 +1,238 @@
+<ul>
+    <li>Verify if we have the nomination and identify the correct customer. </li>
+    <li>Determine the appointed agent for the vessel. </li>
+    <li>If the terminal is G3 and the customer is not BUNGE, please disregard this email. However, if there has been a shift from/to another terminal to/from G3, ensure that we are assigned the appropriate Inbound/Outbound slot not at G3. </li>
+    <li>If the ship has visited Suncor or Petrocan terminals, kindly inform our commercial team to determine if it is our scheduled movement. </li>
+    <li>If none of the above conditions apply, promptly contact the agent and inform them of our nomination for the respective vessel. </li>
+    <li><strong style="background-color: yellow;"> Do not mention nomination is from Ports Direct </strong> only disclose the name of the customer if nomination is from Ports Direct. </li>
+</ul>
+
+<h2>Agent Contact Information:</h2>
+
+<table border="0" cellspacing="0" cellpadding="0" width="679" style="width:509.0pt;border-collapse:collapse;mso-yfti-tbllook:1184;
+ mso-padding-alt:0in 0in 0in 0in;border-spacing: 0px;box-sizing: border-box">
+ <tbody><tr style="mso-yfti-irow:0;mso-yfti-firstrow:yes;height:15.75pt">
+  <td width="197" style="width:148.0pt;border:none;border-bottom:double windowtext 2.25pt;
+  background:white;padding:0in 5.4pt 0in 5.4pt;height:15.75pt">
+  <p><b><span style="color:black">Agency Name</span></b></p>
+  </td>
+  <td width="284" style="width:213.0pt;border:none;border-bottom:double windowtext 2.25pt;
+  background:white;padding:0in 5.4pt 0in 5.4pt;height:15.75pt">
+  <p><b><span style="color:black">Emails</span></b></p>
+  </td>
+  <td width="197" style="width:148.0pt;border:none;border-bottom:double windowtext 2.25pt;
+  background:white;padding:0in 5.4pt 0in 5.4pt;height:15.75pt">
+  <p><b><span style="color:black">Number</span></b></p>
+  </td>
+ </tr>
+ <tr style="mso-yfti-irow:1;height:15.75pt">
+  <td width="197" style="width:148.0pt;background:white;padding:0in 5.4pt 0in 5.4pt;
+  height:15.75pt">
+  <p><span style="color:black">Wheelhouse</span></p>
+  </td>
+  <td width="284" style="width:213.0pt;background:white;padding:0in 5.4pt 0in 5.4pt;
+  height:15.75pt">
+  <p><u><span style="color:#0563C1"><a href="mailto:office@wheelhouseshipping.com">office@wheelhouseshipping.com</a></span></u></p>
+  </td>
+  <td width="197" style="width:148.0pt;background:white;padding:0in 5.4pt 0in 5.4pt;
+  height:15.75pt">
+  <p><span style="color:black">604-891-5555</span></p>
+  </td>
+ </tr>
+ <tr style="mso-yfti-irow:2;height:15.0pt">
+  <td width="197" style="width:148.0pt;background:white;padding:0in 5.4pt 0in 5.4pt;
+  height:15.0pt">
+  <p><span style="color:black">Colley West</span></p>
+  </td>
+  <td width="284" style="width:213.0pt;background:white;padding:0in 5.4pt 0in 5.4pt;
+  height:15.0pt">
+  <p><u><span style="color:#0563C1"><a href="mailto:sharlene@colleywest.bc.ca">sharlene@colleywest.bc.ca</a></span></u></p>
+  </td>
+  <td width="197" style="width:148.0pt;background:white;padding:0in 5.4pt 0in 5.4pt;
+  height:15.0pt">
+  <p><span style="color:black">604-687-3733</span></p>
+  </td>
+ </tr>
+ <tr style="mso-yfti-irow:3;height:15.0pt">
+  <td width="197" style="width:148.0pt;background:white;padding:0in 5.4pt 0in 5.4pt;
+  height:15.0pt">
+  <p><span style="color:black">Navitrans</span></p>
+  </td>
+  <td width="284" style="width:213.0pt;background:white;padding:0in 5.4pt 0in 5.4pt;
+  height:15.0pt">
+  <p><u><span style="color:#0563C1"><a href="mailto:ops@navwest.com">ops@navwest.com</a></span></u></p>
+  </td>
+  <td width="197" style="width:148.0pt;background:white;padding:0in 5.4pt 0in 5.4pt;
+  height:15.0pt">
+  <p><span style="color:black">604-689-9555</span></p>
+  </td>
+ </tr>
+ <tr style="mso-yfti-irow:4;height:15.0pt">
+  <td width="197" style="width:148.0pt;background:white;padding:0in 5.4pt 0in 5.4pt;
+  height:15.0pt">
+  <p><span style="color:black">Norton Lilly</span></p>
+  </td>
+  <td width="284" style="width:213.0pt;background:white;padding:0in 5.4pt 0in 5.4pt;
+  height:15.0pt">
+  <p><u><span style="color:#0563C1"><a href="mailto:van-ops@nortonlilly.com">van-ops@nortonlilly.com</a></span></u></p>
+  </td>
+  <td width="197" style="width:148.0pt;background:white;padding:0in 5.4pt 0in 5.4pt;
+  height:15.0pt">
+  <p><span style="color:black">604-640-7497</span></p>
+  </td>
+ </tr>
+ <tr style="mso-yfti-irow:5;height:15.0pt">
+  <td width="197" style="width:148.0pt;background:white;padding:0in 5.4pt 0in 5.4pt;
+  height:15.0pt">
+  <p><span style="color:black">Mason</span></p>
+  </td>
+  <td width="284" style="width:213.0pt;background:white;padding:0in 5.4pt 0in 5.4pt;
+  height:15.0pt">
+  <p><u><span style="color:#0563C1"><a href="mailto:masonagency@bcshipping.ca">masonagency@bcshipping.ca</a></span></u></p>
+  </td>
+  <td width="197" style="width:148.0pt;background:white;padding:0in 5.4pt 0in 5.4pt;
+  height:15.0pt">
+  <p><span style="color:black">604-689-8628</span></p>
+  </td>
+ </tr>
+ <tr style="mso-yfti-irow:6;height:15.0pt">
+  <td width="197" style="width:148.0pt;background:white;padding:0in 5.4pt 0in 5.4pt;
+  height:15.0pt">
+  <p><span style="color:black">Montship</span></p>
+  </td>
+  <td width="284" style="width:213.0pt;background:white;padding:0in 5.4pt 0in 5.4pt;
+  height:15.0pt">
+  <p><u><span style="color:#0563C1"><a href="mailto:agency.vcr@Montship.ca">agency.vcr@Montship.ca</a></span></u></p>
+  </td>
+  <td width="197" style="width:148.0pt;background:white;padding:0in 5.4pt 0in 5.4pt;
+  height:15.0pt">
+  <p><span style="color:black">604-640-7400</span></p>
+  </td>
+ </tr>
+ <tr style="mso-yfti-irow:7;height:15.0pt">
+  <td width="197" style="width:148.0pt;background:white;padding:0in 5.4pt 0in 5.4pt;
+  height:15.0pt">
+  <p><span style="color:black">ACGI</span></p>
+  </td>
+  <td width="284" style="width:213.0pt;background:white;padding:0in 5.4pt 0in 5.4pt;
+  height:15.0pt">
+  <p><u><span style="color:#0563C1"><a href="mailto:vancouver@acgishipping.com">vancouver@acgishipping.com</a></span></u></p>
+  </td>
+  <td width="197" style="width:148.0pt;background:white;padding:0in 5.4pt 0in 5.4pt;
+  height:15.0pt">
+  <p><span style="color:black">604-484-8001</span></p>
+  </td>
+ </tr>
+ <tr style="mso-yfti-irow:8;height:15.0pt">
+  <td width="197" style="width:148.0pt;background:white;padding:0in 5.4pt 0in 5.4pt;
+  height:15.0pt">
+  <p><span style="color:black">Pacific Northwest (PNW)</span></p>
+  </td>
+  <td width="284" style="width:213.0pt;background:white;padding:0in 5.4pt 0in 5.4pt;
+  height:15.0pt">
+  <p><u><span style="color:#0563C1"><a href="mailto:payable@pnwship.com">payable@pnwship.com</a></span></u></p>
+  </td>
+  <td width="197" style="width:148.0pt;background:white;padding:0in 5.4pt 0in 5.4pt;
+  height:15.0pt">
+  <p><span style="color:black">604-924-1830</span></p>
+  </td>
+ </tr>
+ <tr style="mso-yfti-irow:9;height:15.0pt">
+  <td width="197" style="width:148.0pt;background:white;padding:0in 5.4pt 0in 5.4pt;
+  height:15.0pt">
+  <p><span style="color:black">Tormar</span></p>
+  </td>
+  <td width="284" style="width:213.0pt;background:white;padding:0in 5.4pt 0in 5.4pt;
+  height:15.0pt">
+  <p><u><span style="color:#0563C1"><a href="mailto:operations@tormar.ca">operations@tormar.ca</a></span></u></p>
+  </td>
+  <td width="197" style="width:148.0pt;background:white;padding:0in 5.4pt 0in 5.4pt;
+  height:15.0pt">
+  <p><span style="color:black">778-588-5470</span></p>
+  </td>
+ </tr>
+ <tr style="mso-yfti-irow:10;height:15.0pt">
+  <td width="197" style="width:148.0pt;background:white;padding:0in 5.4pt 0in 5.4pt;
+  height:15.0pt">
+  <p><span style="color:black">GW Nickerson</span></p>
+  </td>
+  <td width="284" style="width:213.0pt;background:white;padding:0in 5.4pt 0in 5.4pt;
+  height:15.0pt">
+  <p><u><span style="color:#0563C1"><a href="mailto:operations@gwnickerson.com">operations@gwnickerson.com</a></span></u></p>
+  </td>
+  <td width="197" style="width:148.0pt;background:white;padding:0in 5.4pt 0in 5.4pt;
+  height:15.0pt">
+  <p><span style="color:black">250-624-5233</span></p>
+  </td>
+ </tr>
+ <tr style="mso-yfti-irow:11;height:15.0pt">
+  <td width="197" style="width:148.0pt;background:white;padding:0in 5.4pt 0in 5.4pt;
+  height:15.0pt">
+  <p><span style="color:black">Canpotex</span></p>
+  </td>
+  <td width="284" style="width:213.0pt;background:white;padding:0in 5.4pt 0in 5.4pt;
+  height:15.0pt">
+  <p><u><span style="color:#0563C1"><a href="mailto:CanpotexAgency@neptuneterminals.com">CanpotexAgency@neptuneterminals.com</a></span></u></p>
+  </td>
+  <td width="197" style="width:148.0pt;background:white;padding:0in 5.4pt 0in 5.4pt;
+  height:15.0pt">
+  <p><span style="color:black">604-983-4418</span></p>
+  </td>
+ </tr>
+ <tr style="mso-yfti-irow:12;height:15.0pt">
+  <td width="197" style="width:148.0pt;background:white;padding:0in 5.4pt 0in 5.4pt;
+  height:15.0pt">
+  <p><span style="color:black">WESTWARD SHIPPING</span></p>
+  </td>
+  <td width="284" style="width:213.0pt;background:white;padding:0in 5.4pt 0in 5.4pt;
+  height:15.0pt">
+  <p><u><span style="color:#0563C1"><a href="mailto:ops@westwardshipping.ca">ops@westwardshipping.ca</a></span></u></p>
+  </td>
+  <td width="197" style="width:148.0pt;background:white;padding:0in 5.4pt 0in 5.4pt;
+  height:15.0pt">
+  <p><span style="color:black">Call Travis</span></p>
+  </td>
+ </tr>
+ <tr style="mso-yfti-irow:13;height:15.0pt">
+  <td width="197" style="width:148.0pt;background:white;padding:0in 5.4pt 0in 5.4pt;
+  height:15.0pt">
+  <p><span style="color:black">TRANS-OCEANIC</span></p>
+  </td>
+  <td width="284" style="width:213.0pt;background:white;padding:0in 5.4pt 0in 5.4pt;
+  height:15.0pt">
+  <p><u><span style="color:#0563C1"><a href="mailto:office@transoceanic.ca">office@transoceanic.ca</a></span></u></p>
+  </td>
+  <td width="197" style="width:148.0pt;background:white;padding:0in 5.4pt 0in 5.4pt;
+  height:15.0pt">
+  <p><span style="color:black">604-684-2388</span></p>
+  </td>
+ </tr>
+ <tr style="mso-yfti-irow:14;height:15.0pt">
+  <td width="197" style="width:148.0pt;background:white;padding:0in 5.4pt 0in 5.4pt;
+  height:15.0pt">
+  <p><span style="color:black">TNC AGENCIES</span></p>
+  </td>
+  <td width="284" style="width:213.0pt;background:white;padding:0in 5.4pt 0in 5.4pt;
+  height:15.0pt">
+  <p><u><span style="color:#0563C1"><a href="mailto:princerupert@tncagencies.com">princerupert@tncagencies.com</a></span></u></p>
+  </td>
+  <td width="197" style="width:148.0pt;background:white;padding:0in 5.4pt 0in 5.4pt;
+  height:15.0pt">
+  <p><span style="color:black">250-632-2221</span></p>
+  </td>
+ </tr>
+ <tr style="mso-yfti-irow:15;mso-yfti-lastrow:yes;height:15.0pt">
+  <td width="197" style="width:148.0pt;background:white;padding:0in 5.4pt 0in 5.4pt;
+  height:15.0pt">
+  <p><span style="color:black">LBH</span></p>
+  </td>
+  <td width="284" style="width:213.0pt;background:white;padding:0in 5.4pt 0in 5.4pt;
+  height:15.0pt">
+  <p><u><span style="color:#0563C1"><a href="mailto:operations@lbhcanada.com">operations@lbhcanada.com</a></span></u></p>
+  </td>
+  <td width="197" style="width:148.0pt;background:white;padding:0in 5.4pt 0in 5.4pt;
+  height:15.0pt">
+  <p><span style="color:black">604-681-2351</span></p>
+  </td>
+ </tr>
+</tbody></table>
